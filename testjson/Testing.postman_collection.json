@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "93263e4b-8866-4ae6-9b83-f3516f9ff80c",
+		"name": "Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dLabs - find size",
+			"item": [
+				{
+					"name": "Find Size Simple",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"/\",\n\t\"type\": \"directory\",\n\t\"content\": [\n\t\t{\n\t\t\"name\" : \"tmp.txt\",\n\t\t\"type\": \"file\",\n\t\t\"size\": 1000\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\"name\" : \"file3.txt\",\n\t\t    \"type\": \"file\",\n\t\t    \"size\": 200\n\t\t}\n\t\t\t\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3500/find-size",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3500",
+							"path": [
+								"find-size"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Size",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"/\",\n\t\"type\": \"directory\",\n\t\"content\": {\n\t\t\"name\" : \"tmp.txt\",\n\t\t\"type\": \"file\",\n\t\t\"size\": 1000\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3500/find-size",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3500",
+									"path": [
+										"find-size"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-tkAFfbbfVD4bNkJVQRZTtRx+Lmw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2019 11:16:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"sizeData\": {\n            \"name\": \"/\",\n            \"type\": \"directory\",\n            \"content\": {\n                \"name\": \"tmp.txt\",\n                \"type\": \"file\",\n                \"size\": 1000\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Find Size Sample Input-Output",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"/\",\n\t\"type\": \"directory\",\n\t\"content\": [\n\t\t\n\t\t{\n\t\t\t\"name\" : \"/user\",\n\t\t    \"type\": \"directory\",\n\t\t     \"content\": [\n\t\t     \t{\n\t\t\t\t\n\t\t     \t\t\"name\": \"file2.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 200\n\t\t     \t},\n\t\t     \t{\n\t\t\t\t\n\t\t     \t\t\"name\": \"file3.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 500\n\t\t     \t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\"name\" : \"tmp.txt\",\n\t\t\"type\": \"file\",\n\t\t\"size\": 1000\n\t\t\t\n\t\t}\n\t\t\t\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3500/find-size",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3500",
+							"path": [
+								"find-size"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Size",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"/\",\n\t\"type\": \"directory\",\n\t\"content\": {\n\t\t\"name\" : \"tmp.txt\",\n\t\t\"type\": \"file\",\n\t\t\"size\": 1000\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3500/find-size",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3500",
+									"path": [
+										"find-size"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-tkAFfbbfVD4bNkJVQRZTtRx+Lmw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2019 11:16:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"sizeData\": {\n            \"name\": \"/\",\n            \"type\": \"directory\",\n            \"content\": {\n                \"name\": \"tmp.txt\",\n                \"type\": \"file\",\n                \"size\": 1000\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Find Size More Nested",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"/\",\n\t\"type\": \"directory\",\n\t\"content\": [\n\t\t{\n\t\t\t\"name\" : \"/user\",\n\t\t    \"type\": \"directory\",\n\t\t     \"content\": [\n\t\t     \t{\n\t\t\t\t\n\t\t     \t\t\"name\": \"file1.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 200\n\t\t     \t},\n\t\t     \t{\n\t\t\t\t\n\t\t     \t\t\"name\": \"file2.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 500\n\t\t     \t}\n\t\t\t]\n\t\t},\n\t\t{\n\t\t\"name\" : \"/tmp\",\n\t\t\"type\": \"directory\",\n\t\t\"content\": [\n\t\t\t{\n\t\t\t\t\n\t\t     \t\t\"name\": \"file3.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 200\n\t\t     \t},\n\t\t     \t{\n\t\t\t\t\n\t\t     \t\t\"name\": \"file4.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 500\n\t\t     \t}\n\t\t\t]\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\"name\": \"file5.txt\",\n\t\t     \t\t\"type\": \"file\",\n\t\t     \t\t\"size\": 400\n\t\t\t\n\t\t}\n\t\t\t\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3500/find-size",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3500",
+							"path": [
+								"find-size"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Size",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"/\",\n\t\"type\": \"directory\",\n\t\"content\": {\n\t\t\"name\" : \"tmp.txt\",\n\t\t\"type\": \"file\",\n\t\t\"size\": 1000\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3500/find-size",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3500",
+									"path": [
+										"find-size"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-tkAFfbbfVD4bNkJVQRZTtRx+Lmw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Oct 2019 11:16:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"sizeData\": {\n            \"name\": \"/\",\n            \"type\": \"directory\",\n            \"content\": {\n                \"name\": \"tmp.txt\",\n                \"type\": \"file\",\n                \"size\": 1000\n            }\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
